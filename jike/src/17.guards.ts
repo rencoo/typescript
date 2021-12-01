@@ -72,3 +72,21 @@ function getLanguage(type: Type, x: string | number) {
     lang.helloJavaScript();
   }
 }
+
+
+// 实战
+const config = {
+  a: 1,
+  b: 2
+};
+
+const defaultConfig = {
+  b: 3,
+  c: 4
+};
+
+for (const key of Object.keys(defaultConfig)) {
+  if (key in config) {
+    config[key] = defaultConfig[key];
+  }
+}
